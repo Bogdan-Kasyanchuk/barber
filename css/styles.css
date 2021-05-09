@@ -1,6 +1,19 @@
+:root {
+  --accent-color: #99baed;
+  --text-color: #163561;
+  --text-accent-color: #ffffff;
+}
+
+body {
+  font-family: "Catamaran", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
 .container {
   width: 1920px;
-  outline: auton;
+  margin: 0 auto;
 }
 
 .header .container {
@@ -11,31 +24,30 @@
   align-items: center;
 }
 
+.logo {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.336;
+  color: var(--accent-color);
+  margin-top: 59px;
+  margin-right: 110px;
+  position: relative;
+}
+.logo::before {
+  position: absolute;
+  content: "";
+  width: 74px;
+  height: 66px;
+  bottom: 12px;
+  left: -52px;
+  background-image: url(../images/logo-scissors.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .navigation-list {
   display: flex;
-  margin-top: -30px;
-}
-
-.button-list {
-  display: flex;
-  align-items: center;
-  padding-top: 46px;
-  padding-bottom: 17px;
-}
-
-.button-list li:not(:last-child) {
-  margin-right: 72px;
-}
-
-.logo-wrapper {
-  position: relative;
-  margin-top: -12px;
-}
-
-.logo-text {
-  position: absolute;
-  left: 69px;
-  margin-top: 50px;
 }
 
 .navigation-list li:not(:last-child) {
@@ -44,32 +56,47 @@
 
 .navigation-list a {
   font-size: 25px;
-  line-height: 1.34;
-  font-weight: 500;
+  line-height: 1.336;
   padding: 67px 14px 8px;
-  display: block;
-  color: #163561;
+  text-transform: capitalize;
 }
 
 .navigation-list a:hover {
-  background-color: #a3c1ef;
-  color: #ffffff;
+  background-color: var(--accent-color);
+  color: var(--text-accent-color);
   border-radius: 5px;
+  transition: all 0.5s ease-out;
+}
+
+.button-list {
+  display: flex;
+  align-items: center;
+  padding-top: 46px;
+  /* padding-bottom: 17px; */
+}
+
+.button-list li:not(:last-child) {
+  margin-right: 72px;
 }
 
 .button-list button {
   border: none;
   background: transparent;
+  cursor: pointer;
 }
 
 .button-list .btn-appointment {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.5;
+  line-height: 1.506;
   letter-spacing: 0.03em;
-  color: #ffffff;
-  background: #99baed;
+  padding: 23px 32px;
+  color: var(--text-accent-color);
+  background-color: var(--accent-color);
   border-radius: 20px;
-  padding: 23px 32px 23px;
-  border: none;
+}
+
+.button-list .btn-appointment:hover {
+  box-shadow: 0 10px 50px var(--accent-color);
+  transition: all 0.5s ease-out;
 }
