@@ -21,7 +21,7 @@ body {
   padding-left: 170px;
   padding-right: 213px;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .logo {
@@ -64,7 +64,8 @@ body {
 .navigation-list a:hover {
   background-color: var(--accent-color);
   color: var(--text-accent-color);
-  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   transition: all 0.5s ease-out;
 }
 
