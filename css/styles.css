@@ -1,11 +1,14 @@
+/* ========== ПЕРЕМЕННЫЕ ========== */
 :root {
   --accent-color: #99baed;
   --text-color: #163561;
   --text-accent-color: #ffffff;
 }
+/* ========== ПЕРЕМЕННЫЕ-КОНЕЦ ========== */
 
+/* ========== ОБЩИЕ ========== */
 body {
-  font-family: "Catamaran", sans-serif;
+  font-family: 'Catamaran', sans-serif;
   font-size: 15px;
   font-weight: 500;
   color: var(--text-color);
@@ -15,7 +18,9 @@ body {
   width: 1920px;
   margin: 0 auto;
 }
+/* ========== ОБЩИЕ-КОНЕЦ ========== */
 
+/* ========== ХЕДЕР ========== */
 .header .container {
   display: flex;
   padding-left: 170px;
@@ -24,22 +29,23 @@ body {
   align-items: flex-start;
 }
 
-.logo {
+.header .logo {
   font-weight: 600;
   font-size: 40px;
-  line-height: 1.336;
+  line-height: 1.34;
   color: var(--accent-color);
   margin-top: 59px;
   margin-right: 110px;
   position: relative;
 }
-.logo::before {
+
+.header .logo::before {
   position: absolute;
-  content: "";
+  content: '';
   width: 74px;
   height: 66px;
   bottom: 12px;
-  left: -52px;
+  left: -53px;
   background-image: url(../images/logo-scissors.svg);
   background-size: cover;
   background-position: center;
@@ -56,12 +62,13 @@ body {
 
 .navigation-list a {
   font-size: 25px;
-  line-height: 1.336;
+  line-height: 1.34;
   padding: 67px 14px 8px;
   text-transform: capitalize;
 }
 
-.navigation-list a:hover {
+.navigation-list a:hover,
+.navigation-list a:focus {
   background-color: var(--accent-color);
   color: var(--text-accent-color);
   border-bottom-left-radius: 5px;
@@ -73,23 +80,23 @@ body {
   display: flex;
   align-items: center;
   padding-top: 46px;
-  /* padding-bottom: 17px; */
+  padding-bottom: 17px;
 }
 
 .button-list li:not(:last-child) {
   margin-right: 72px;
 }
 
-.button-list button {
+button {
   border: none;
   background: transparent;
   cursor: pointer;
 }
 
-.button-list .btn-appointment {
+.btn {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.506;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   padding: 23px 32px;
   color: var(--text-accent-color);
@@ -97,7 +104,292 @@ body {
   border-radius: 20px;
 }
 
-.button-list .btn-appointment:hover {
-  box-shadow: 0 10px 50px var(--accent-color);
+.btn:hover,
+.btn:focus {
+  box-shadow: 0 10px 50px rgba(153, 186, 237, 0.5);
+  border-radius: 20px;
   transition: all 0.5s ease-out;
 }
+/* ========== ХЕДЕР-КОНЕЦ ========== */
+
+/* ========== ГЕРОЙ ========== */
+.hero .container {
+  padding-top: 134px;
+  padding-bottom: 138px;
+  padding-left: 138px;
+  background-image: url(../images/man-trim.png);
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 50%;
+}
+
+.hero-title {
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 1.34;
+  color: var(--text-color);
+  mask-position: 33px;
+}
+
+.accent-title {
+  color: #fbb400;
+}
+
+.hero-text {
+  width: 526px;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+  opacity: 0.65;
+  margin-top: 29px;
+  margin-bottom: 97px;
+}
+/* ========== ГЕРОЙ-КОНЕЦ ========== */
+
+/* ========== ИСТОРИЯ ========== */
+.history .container {
+  padding-left: 1199px;
+  padding-right: 195px;
+  padding-top: 288px;
+  padding-bottom: 167px;
+  background: url(../images/fon1.svg) no-repeat left top,
+    url(../images/man.png) no-repeat left center, url(../images/fon2.svg) no-repeat right top;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+}
+
+.history-list {
+  margin-top: 80px;
+  margin-bottom: 108px;
+}
+
+.history-item {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+  opacity: 0.65;
+}
+
+.history-item:not(:last-child) {
+  margin-bottom: 48px;
+}
+/* ========== ИСТОРИЯ-КОНЕЦ ========== */
+
+/* ========== СЕРВИС ========== */
+.services .container {
+  padding: 167px 254px 207px;
+  background: url(../images/fon3.svg) no-repeat left bottom -104px,
+    url(../images/fon4.svg) no-repeat right bottom -104px;
+}
+
+.services .title {
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+  margin-bottom: 90px;
+}
+
+.services-list {
+  display: flex;
+}
+
+.services-item:not(:last-child) {
+  margin-right: 45px;
+}
+
+.services-item {
+  padding: 50px 41px 72px;
+  background: #fafbff;
+  box-shadow: 0px 5px 0px var(--accent-color);
+  border-radius: 29px;
+}
+
+.services-item:hover,
+.services-item:focus {
+  background: var(--accent-color);
+  box-shadow: 30px 30px 50px 5px #d4e5ff;
+  cursor: pointer;
+}
+
+.services-item:hover h3,
+.services-item:focus h3,
+.services-item:hover p,
+.services-item:focus p {
+  color: var(--text-accent-color);
+}
+
+.services-item:hover .icon-wrapper,
+.services-item:focus .icon-wrapper {
+  background-color: #fbb400;
+}
+
+.services-item:hover .services-icon,
+.services-item:focus .services-icon {
+  fill: var(--text-accent-color);
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 103px;
+  height: 126px;
+  background: #e5ecfe;
+  box-shadow: 0px 1px 0px #008fdd;
+  border-radius: 13px;
+  margin: 0 auto 59px;
+}
+
+.services-icon {
+  fill: #008fdd;
+}
+
+.subtitle {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+  margin-bottom: 60px;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+  opacity: 0.65;
+}
+/* ========== СЕРВИС-КОНЕЦ ========== */
+
+/* ========== ГАЛЕРЕЯ ========== */
+.gallery .container {
+  padding: 26px 270px 125px;
+  background: url(../images/fon1.svg) no-repeat left top -104px,
+    url(../images/fon2.svg) no-repeat right top -104px;
+}
+
+.gallery .title {
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+  margin-bottom: 110px;
+}
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -37px;
+  margin-left: -37px;
+  margin-bottom: 77px;
+}
+
+.gallery-item {
+  flex-basis: calc((100% - 111px) / 3);
+  position: relative;
+  margin-top: 37px;
+  margin-left: 37px;
+  line-height: 0;
+}
+
+.gallery-item::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(rgba(82, 150, 255, 0.35), rgba(82, 150, 255, 0.35));
+}
+
+.gallery .btn {
+  display: block;
+  margin: 0 auto;
+}
+/* ========== ГАЛЕРЕЯ-КОНЕЦ ========== */
+
+/* ========== ФУТЕР ========== */
+.footer .container {
+  padding: 125px 270px 98px;
+  background: url(../images/fon5.svg) no-repeat left bottom,
+    url(../images/fon6.svg) no-repeat right bottom;
+}
+
+.footer .logo {
+  margin-left: 662px;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.34;
+  color: var(--accent-color);
+  position: relative;
+  margin-bottom: 36px;
+}
+
+.footer .logo::before {
+  position: absolute;
+  content: '';
+  width: 110px;
+  height: 98px;
+  bottom: 12px;
+  left: -78px;
+  background-image: url(../images/logo-scissors.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer-text {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+  opacity: 0.65;
+  margin-bottom: 47px;
+}
+
+.footer-soc-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 47px;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.footer-soc-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--accent-color);
+  width: 67px;
+  height: 67px;
+  border-radius: 50%;
+  fill: var(--text-accent-color);
+}
+
+.footer-soc-list li:not(:last-child) {
+  margin-right: 25px;
+}
+
+/* ========== ФУТЕР-КОНЕЦ ========== */
