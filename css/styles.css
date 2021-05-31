@@ -73,7 +73,6 @@ body {
   color: var(--text-accent-color);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  transition: all 0.5s ease-out;
 }
 
 .button-list {
@@ -106,9 +105,10 @@ button {
 
 .btn:hover,
 .btn:focus {
-  box-shadow: 0 10px 50px rgba(153, 186, 237, 0.5);
+  box-shadow: 0 10px 50px rgba(251, 180, 0, 0.5);
   border-radius: 20px;
   transition: all 0.5s ease-out;
+  background-color: #fbb400;
 }
 /* ========== ХЕДЕР-КОНЕЦ ========== */
 
@@ -377,6 +377,10 @@ button {
   border-bottom: 1px solid var(--accent-color);
 }
 
+.footer-soc-list li:not(:last-child) {
+  margin-right: 25px;
+}
+
 .footer-soc-link {
   display: flex;
   justify-content: center;
@@ -388,8 +392,8 @@ button {
   fill: var(--text-accent-color);
 }
 
-.footer-soc-list li:not(:last-child) {
-  margin-right: 25px;
+.footer-soc-link:hover,
+.footer-soc-link:focus {
+  background-color: #fbb400;
 }
-
 /* ========== ФУТЕР-КОНЕЦ ========== */
