@@ -95,7 +95,7 @@ body {
 
 .navigation-list a:hover,
 .navigation-list a:focus {
-  background-color: var(--primary-accent-color);
+  background-color: var(--third-accent-color);
   color: var(--secondary-accent-color);
 }
 
@@ -125,7 +125,7 @@ button {
   color: var(--secondary-accent-color);
   background-color: var(--primary-accent-color);
   border-radius: 20px;
-  transition-property: background-color, box-shadow;
+  transition-property: background-color, box-shadow, transform;
   transition-duration: var(--trans-dur-250ms);
   transition-timing-function: var(--linear);
 }
@@ -134,6 +134,7 @@ button {
 .btn:focus {
   background-color: var(--third-accent-color);
   box-shadow: 0 10px 50px rgba(251, 180, 0, 0.5);
+  transform: scale(0.9);
 }
 /* ========== ХЕДЕР-КОНЕЦ ========== */
 
@@ -202,15 +203,15 @@ button {
   padding: 50px 41px 72px;
   background: var(--primary-bg-color);
   box-shadow: 0px 5px 0px var(--primary-accent-color);
-  border-radius: 29px;
-  transition-property: background, box-shadow;
+  border-radius: 30px;
+  transition-property: background-color, box-shadow;
   transition-duration: var(--trans-dur-250ms);
   transition-timing-function: var(--linear);
 }
 
 .services-item:hover,
 .services-item:focus {
-  background: var(--primary-accent-color);
+  background-color: var(--primary-accent-color);
   box-shadow: 30px 30px 50px 5px #d4e5ff;
   cursor: pointer;
 }
@@ -236,9 +237,8 @@ button {
   width: 103px;
   height: 126px;
   margin: 0 auto 59px;
-  background: var(--secondary-bg-color);
-  box-shadow: 0px 1px 0px #008fdd;
-  border-radius: 13px;
+  background-color: var(--primary-accent-color);
+  border-radius: 15px;
   transition-property: background-color;
   transition-duration: var(--trans-dur-250ms);
   transition-timing-function: var(--linear);
@@ -250,7 +250,7 @@ button {
 }
 
 .services-icon {
-  fill: #008fdd;
+  fill: var(--primary-text-color);
   transition-property: fill;
   transition-duration: var(--trans-dur-250ms);
   transition-timing-function: var(--linear);
@@ -370,12 +370,12 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--primary-accent-color);
   width: 67px;
   height: 67px;
   border-radius: 50%;
+  background-color: var(--primary-accent-color);
   fill: var(--secondary-accent-color);
-  transition-property: background-color;
+  transition-property: background-color, transform;
   transition-duration: var(--trans-dur-250ms);
   transition-timing-function: var(--linear);
 }
@@ -383,5 +383,6 @@ button {
 .footer-soc-link:hover,
 .footer-soc-link:focus {
   background-color: var(--third-accent-color);
+  transform: scale(1.1);
 }
 /* ========== ФУТЕР-КОНЕЦ ========== */
