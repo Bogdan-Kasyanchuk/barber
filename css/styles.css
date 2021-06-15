@@ -82,12 +82,12 @@ body {
 }
 
 .navigation-list a {
+  padding: 67px 14px 8px;
   font-weight: 500;
   line-height: 1.34;
-  padding: 67px 14px 8px;
+  text-transform: capitalize;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  text-transform: capitalize;
   transition-property: background-color, color;
   transition-duration: var(--trans-dur-250ms);
   transition-timing-function: var(--linear);
